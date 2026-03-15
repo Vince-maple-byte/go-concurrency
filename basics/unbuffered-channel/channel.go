@@ -34,7 +34,7 @@ func ObjectDisplay(o *Object) string {
 func main() {
 	//How a simple unbuffered channel is done in golang.
 	obj := make([]*Object, 10);
-	channel := make(chan string);
+	channel := make(chan string, 0);
 
 	for i := 0; i < 10; i++ {
 		go func (index int) {
